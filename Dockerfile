@@ -1,12 +1,10 @@
 FROM node:14 AS development
 
 ARG ENV \
-    DATABASE_URL \
     API_KEY_1 \
     API_KEY_2
 
 ENV ENV=$ENV \
-    DATABASE_URL=$DATABASE_URL \
     API_KEY_1=$API_KEY_1 \
     API_KEY_2=$API_KEY_2
 
