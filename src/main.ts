@@ -13,9 +13,12 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   const options = new DocumentBuilder()
-    .setTitle('')
-    .setDescription('')
-    .setVersion('1.0.0')
+    .setTitle('Images Optimizer API')
+    .setDescription(
+      // eslint-disable-next-line max-len
+      'ImagesOptimizer is a robust and ultra-fast image compressor and optimizer built with best-in-class algorithms.',
+    )
+    .setVersion('0.0.1')
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('/api/docs', app, document, {

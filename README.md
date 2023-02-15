@@ -1,53 +1,9 @@
-#NestJs Scaffold
-
-## Before adding the first line of code
-
-1. Search the entire project for the following string "[repository name]" and change it to the actual repository name. 
-2. Change name and description values of package.json file 
-3. Change principal title to README file (#NestJs Scaffold) to the repository name
-4. Create .env file and use the environment variables that are in the .env.example file
-5. Configure and change api keys values to API_KEY_1 and API_KEY_2
-6. Configure and change mongo db string connection or remove environment variable to Dockerfile and ci-cd.yml workflow
-
-## Database configuration
-
-1. Please change provider value in datasource configuration to ./prisma/schema.prisma file
-```prisma
-// provider values available: mongodb, postgresql
-datasource db {
-  provider = "mongodb"
-  url      = env("DATABASE_URL")
-}
-```
-
-2. Leave only uncomment database service in docker-compose.yml file
-```yaml
-#  db:
-#    image: mongo:latest
-#    ...
-
-  db:
-    image: postgres:13.5
-```
-
-3. Use dabase connecton in .env file depending the service configuration in docker-compose.yml file
-```dotenv
-# MongoDB service connection
-DATABASE_URL="mongodb://localhost:27017/nestjsScaffold"
-# Postgres service connection
-#DATABASE_URL="postgres://MiAguila:tR4#$p0rT3@localhost:5432/nestjsScaffold"
-```
-
-### Execute migrations
-1. You can uncomment model example in schema.prisma file and run:
-```shell
-npx prisma db push
-```
-
+#Images Optimizer API
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+ImagesOptimizer is a robust and ultra-fast image compressor and optimizer built with best-in-class algorithms. 
+We will save you bandwidth and storage space and drastically improve your website load times by managing image optimization with today's standard formats such as webp, jpeg and png.
 
 ## Installation
 
